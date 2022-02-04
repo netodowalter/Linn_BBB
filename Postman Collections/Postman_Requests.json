@@ -1,0 +1,437 @@
+{
+  "info": {
+    "_postman_id": "4aef97d6-a67f-403b-8891-4eeb5b62a91f",
+    "name": "Linn_BBB",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Lina Tweets Lista BBB Influencers",
+      "_postman_id": "a0b3735e-7103-4099-a40a-d5de7fe12e3c",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "token": "{{bearer_token}}"
+          }
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.twitter.com/2/tweets/search/recent?query=Linn OR Lina (from:canalespiadinha OR from:maedinahparcial OR from:hacker_real1 OR from:tvlizando OR from:realitysvip OR from:vaidesmaiar OR from:anapaularenault OR from:popline OR from:falamuka OR from:hugogloss) -is:reply -is:quote -is:retweet &max_results=100&tweet.fields={{common_tweet_f}}&expansions=attachments.poll_ids,author_id&poll.fields={{all_poll_f}}&user.fields={{common_user_f}}",
+          "protocol": "https",
+          "host": [
+            "api",
+            "twitter",
+            "com"
+          ],
+          "path": [
+            "2",
+            "tweets",
+            "search",
+            "recent"
+          ],
+          "query": [
+            {
+              "key": "query",
+              "value": "Linn OR Lina (from:canalespiadinha OR from:maedinahparcial OR from:hacker_real1 OR from:tvlizando OR from:realitysvip OR from:vaidesmaiar OR from:anapaularenault OR from:popline OR from:falamuka OR from:hugogloss) -is:reply -is:quote -is:retweet ",
+              "description": "Required. Query for matching Tweets. Up to 512 characters."
+            },
+            {
+              "description": "The oldest UTC timestamp (from most recent 7 days) from which the Tweets will be provided. YYYY-MM-DDTHH:mm:ssZ (ISO 8601/RFC 3339).",
+              "key": "start_time",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "description": "The newest, most recent UTC timestamp to which the Tweets will be provided. YYYY-MM-DDTHH:mm:ssZ (ISO 8601/RFC 3339).",
+              "key": "end_time",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "description": "Returns results with a Tweet ID greater than (that is, more recent than) the specified ID. The ID specified is exclusive and responses will not include it.",
+              "key": "since_id",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "description": "Returns results with a Tweet ID less than (that is, older than) the specified ID. The ID specified is exclusive and responses will not include it.",
+              "key": "until_id",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "max_results",
+              "value": "100",
+              "description": "The maximum number of search results to be returned by a request. A number between 10 and the system limit (currently 100). By default, a request response will return 10 results."
+            },
+            {
+              "description": "This parameter is used to get the next 'page' of results. The value used with the parameter is pulled directly from the response provided by the API, and should not be modified.",
+              "key": "next_token",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "tweet.fields",
+              "value": "{{common_tweet_f}}",
+              "description": "Comma-separated list of fields for the Tweet object.\n\nAllowed values:\nattachments,author_id,context_annotations,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,non_public_metrics,organic_metrics,possibly_sensitive,promoted_metrics,public_metrics,referenced_tweets,reply_settings,source,text,withheld\n\nDefault values:\nid,text\n\nOAuth1.0a User Context authorization required if any of the following fields are included in the request:\nnon_public_metrics,organic_metrics,promoted_metrics"
+            },
+            {
+              "key": "expansions",
+              "value": "attachments.poll_ids,author_id",
+              "description": "Comma-separated list of fields to expand. Expansions enable requests to expand an ID into a full object in the includes response object.\n\nAllowed values: attachments.poll_ids,attachments.media_keys,author_id,geo.place_id,in_reply_to_user_id,referenced_tweets.id,entities.mentions.username,referenced_tweets.id.author_id\n\nDefault values: none"
+            },
+            {
+              "description": "Comma-separated list of fields for the media object. Expansion required.\n\nAllowed values:\nduration_ms,height,media_key,non_public_metrics,organic_metrics,preview_image_url,promoted_metrics,public_metrics,type,url,width\n\nDefault values:\nmedia_key,type\n\nOAuth1.0a User Context authorization required if any of the following fields are included in the request:\nnon_public_metrics,organic_metrics,promoted_metrics",
+              "key": "media.fields",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "description": "Comma-separated list of fields for the place object. Expansion required.\n\nAllowed values:\ncontained_within,country,country_code,full_name,geo,id,name,place_type\n\nDefault values:\nid,full_name",
+              "key": "place.fields",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "poll.fields",
+              "value": "{{all_poll_f}}",
+              "description": "Comma-separated list of fields for the poll object. Expansion required.\n\nAllowed values:\nduration_minutes,end_datetime,id,options,voting_status\n\nDefault values:\nid, options"
+            },
+            {
+              "key": "user.fields",
+              "value": "{{common_user_f}}",
+              "description": "Comma-separated list of fields for the user object. Expansion required.\n\nAllowed values:\ncreated_at,description,entities,id,location,name,pinned_tweet_id,profile_image_url,protected,public_metrics,url,username,verified,withheld\n\nDefault values:\nid,name,username"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tiago Abravanel Tweets Lista BBB Influencers",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "4d6181ec-c509-48a3-9ca2-fd18cf56f165",
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "5056f26c-4ddf-4249-ac1d-e04439a6c86b",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "token": "{{bearer_token}}"
+          }
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.twitter.com/2/tweets/search/recent?query=Tiago OR Thiago OR Abravanel (from:canalespiadinha OR from:maedinahparcial OR from:hacker_real1 OR from:tvlizando OR from:realitysvip OR from:vaidesmaiar OR from:anapaularenault OR from:popline OR from:falamuka OR from:hugogloss) -is:reply -is:quote -is:retweet&max_results=100&tweet.fields={{common_tweet_f}}&expansions=attachments.poll_ids,author_id&poll.fields={{all_poll_f}}&user.fields={{common_user_f}}",
+          "protocol": "https",
+          "host": [
+            "api",
+            "twitter",
+            "com"
+          ],
+          "path": [
+            "2",
+            "tweets",
+            "search",
+            "recent"
+          ],
+          "query": [
+            {
+              "key": "query",
+              "value": "Tiago OR Thiago OR Abravanel (from:canalespiadinha OR from:maedinahparcial OR from:hacker_real1 OR from:tvlizando OR from:realitysvip OR from:vaidesmaiar OR from:anapaularenault OR from:popline OR from:falamuka OR from:hugogloss) -is:reply -is:quote -is:retweet",
+              "description": "Required. Query for matching Tweets. Up to 512 characters."
+            },
+            {
+              "description": "The oldest UTC timestamp (from most recent 7 days) from which the Tweets will be provided. YYYY-MM-DDTHH:mm:ssZ (ISO 8601/RFC 3339).",
+              "key": "start_time",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "description": "The newest, most recent UTC timestamp to which the Tweets will be provided. YYYY-MM-DDTHH:mm:ssZ (ISO 8601/RFC 3339).",
+              "key": "end_time",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "description": "Returns results with a Tweet ID greater than (that is, more recent than) the specified ID. The ID specified is exclusive and responses will not include it.",
+              "key": "since_id",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "description": "Returns results with a Tweet ID less than (that is, older than) the specified ID. The ID specified is exclusive and responses will not include it.",
+              "key": "until_id",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "max_results",
+              "value": "100",
+              "description": "The maximum number of search results to be returned by a request. A number between 10 and the system limit (currently 100). By default, a request response will return 10 results."
+            },
+            {
+              "description": "This parameter is used to get the next 'page' of results. The value used with the parameter is pulled directly from the response provided by the API, and should not be modified.",
+              "key": "next_token",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "tweet.fields",
+              "value": "{{common_tweet_f}}",
+              "description": "Comma-separated list of fields for the Tweet object.\n\nAllowed values:\nattachments,author_id,context_annotations,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,non_public_metrics,organic_metrics,possibly_sensitive,promoted_metrics,public_metrics,referenced_tweets,reply_settings,source,text,withheld\n\nDefault values:\nid,text\n\nOAuth1.0a User Context authorization required if any of the following fields are included in the request:\nnon_public_metrics,organic_metrics,promoted_metrics"
+            },
+            {
+              "key": "expansions",
+              "value": "attachments.poll_ids,author_id",
+              "description": "Comma-separated list of fields to expand. Expansions enable requests to expand an ID into a full object in the includes response object.\n\nAllowed values: attachments.poll_ids,attachments.media_keys,author_id,geo.place_id,in_reply_to_user_id,referenced_tweets.id,entities.mentions.username,referenced_tweets.id.author_id\n\nDefault values: none"
+            },
+            {
+              "description": "Comma-separated list of fields for the media object. Expansion required.\n\nAllowed values:\nduration_ms,height,media_key,non_public_metrics,organic_metrics,preview_image_url,promoted_metrics,public_metrics,type,url,width\n\nDefault values:\nmedia_key,type\n\nOAuth1.0a User Context authorization required if any of the following fields are included in the request:\nnon_public_metrics,organic_metrics,promoted_metrics",
+              "key": "media.fields",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "description": "Comma-separated list of fields for the place object. Expansion required.\n\nAllowed values:\ncontained_within,country,country_code,full_name,geo,id,name,place_type\n\nDefault values:\nid,full_name",
+              "key": "place.fields",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "poll.fields",
+              "value": "{{all_poll_f}}",
+              "description": "Comma-separated list of fields for the poll object. Expansion required.\n\nAllowed values:\nduration_minutes,end_datetime,id,options,voting_status\n\nDefault values:\nid, options"
+            },
+            {
+              "key": "user.fields",
+              "value": "{{common_user_f}}",
+              "description": "Comma-separated list of fields for the user object. Expansion required.\n\nAllowed values:\ncreated_at,description,entities,id,location,name,pinned_tweet_id,profile_image_url,protected,public_metrics,url,username,verified,withheld\n\nDefault values:\nid,name,username"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Busca pela ID das Enquetes Twitter",
+      "_postman_id": "36080809-a1aa-4917-b599-46589350969f",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "token": "{{bearer_token}}"
+          }
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.twitter.com/2/tweets/search/recent?query=paredão (from:maedinahparcial OR from:hacker_real1 OR from:tvlizando OR from:realitysvip OR from:vaidesmaiar OR from:anapaularenault OR from:popline OR from:falamuka OR from:hugogloss)&max_results=100&tweet.fields=attachments,author_id,conversation_id,created_at,public_metrics,source,text&expansions=attachments.poll_ids,author_id&poll.fields=duration_minutes,end_datetime,id,options,voting_status&user.fields=created_at,description,public_metrics,url,username",
+          "protocol": "https",
+          "host": [
+            "api",
+            "twitter",
+            "com"
+          ],
+          "path": [
+            "2",
+            "tweets",
+            "search",
+            "recent"
+          ],
+          "query": [
+            {
+              "key": "query",
+              "value": "paredão (from:maedinahparcial OR from:hacker_real1 OR from:tvlizando OR from:realitysvip OR from:vaidesmaiar OR from:anapaularenault OR from:popline OR from:falamuka OR from:hugogloss)",
+              "description": "Required. Query for matching Tweets. Up to 512 characters."
+            },
+            {
+              "description": "The oldest UTC timestamp (from most recent 7 days) from which the Tweets will be provided. YYYY-MM-DDTHH:mm:ssZ (ISO 8601/RFC 3339).",
+              "key": "start_time",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "description": "The newest, most recent UTC timestamp to which the Tweets will be provided. YYYY-MM-DDTHH:mm:ssZ (ISO 8601/RFC 3339).",
+              "key": "end_time",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "description": "Returns results with a Tweet ID greater than (that is, more recent than) the specified ID. The ID specified is exclusive and responses will not include it.",
+              "key": "since_id",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "description": "Returns results with a Tweet ID less than (that is, older than) the specified ID. The ID specified is exclusive and responses will not include it.",
+              "key": "until_id",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "max_results",
+              "value": "100",
+              "description": "The maximum number of search results to be returned by a request. A number between 10 and the system limit (currently 100). By default, a request response will return 10 results."
+            },
+            {
+              "description": "This parameter is used to get the next 'page' of results. The value used with the parameter is pulled directly from the response provided by the API, and should not be modified.",
+              "key": "next_token",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "tweet.fields",
+              "value": "attachments,author_id,conversation_id,created_at,public_metrics,source,text",
+              "description": "Comma-separated list of fields for the Tweet object.\n\nAllowed values:\nattachments,author_id,context_annotations,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,non_public_metrics,organic_metrics,possibly_sensitive,promoted_metrics,public_metrics,referenced_tweets,reply_settings,source,text,withheld\n\nDefault values:\nid,text\n\nOAuth1.0a User Context authorization required if any of the following fields are included in the request:\nnon_public_metrics,organic_metrics,promoted_metrics"
+            },
+            {
+              "key": "expansions",
+              "value": "attachments.poll_ids,author_id",
+              "description": "Comma-separated list of fields to expand. Expansions enable requests to expand an ID into a full object in the includes response object.\n\nAllowed values: attachments.poll_ids,attachments.media_keys,author_id,geo.place_id,in_reply_to_user_id,referenced_tweets.id,entities.mentions.username,referenced_tweets.id.author_id\n\nDefault values: none"
+            },
+            {
+              "description": "Comma-separated list of fields for the media object. Expansion required.\n\nAllowed values:\nduration_ms,height,media_key,non_public_metrics,organic_metrics,preview_image_url,promoted_metrics,public_metrics,type,url,width\n\nDefault values:\nmedia_key,type\n\nOAuth1.0a User Context authorization required if any of the following fields are included in the request:\nnon_public_metrics,organic_metrics,promoted_metrics",
+              "key": "media.fields",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "description": "Comma-separated list of fields for the place object. Expansion required.\n\nAllowed values:\ncontained_within,country,country_code,full_name,geo,id,name,place_type\n\nDefault values:\nid,full_name",
+              "key": "place.fields",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "poll.fields",
+              "value": "duration_minutes,end_datetime,id,options,voting_status",
+              "description": "Comma-separated list of fields for the poll object. Expansion required.\n\nAllowed values:\nduration_minutes,end_datetime,id,options,voting_status\n\nDefault values:\nid, options"
+            },
+            {
+              "key": "user.fields",
+              "value": "created_at,description,public_metrics,url,username",
+              "description": "Comma-separated list of fields for the user object. Expansion required.\n\nAllowed values:\ncreated_at,description,entities,id,location,name,pinned_tweet_id,profile_image_url,protected,public_metrics,url,username,verified,withheld\n\nDefault values:\nid,name,username"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Valores Enquetes",
+      "_postman_id": "ebb524d4-1f28-463c-82db-3a2e28f89211",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.twitter.com/2/tweets?ids=",
+          "protocol": "https",
+          "host": [
+            "api",
+            "twitter",
+            "com"
+          ],
+          "path": [
+            "2",
+            "tweets"
+          ],
+          "query": [
+            {
+              "key": "ids",
+              "value": "",
+              "description": "Required. Enter up to 100 comma-separated Tweet IDs."
+            },
+            {
+              "description": "Comma-separated list of fields for the Tweet object.\n\nAllowed values:\nattachments,author_id,context_annotations,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,non_public_metrics,organic_metrics,possibly_sensitive,promoted_metrics,public_metrics,referenced_tweets,reply_settings,source,text,withheld\n\nDefault values:\nid,text\n\nOAuth1.0a User Context authorization required if any of the following fields are included in the request:\nnon_public_metrics,organic_metrics,promoted_metrics\n",
+              "key": "tweet.fields",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "description": "Comma-separated list of fields to expand. Expansions enable requests to expand an ID into a full object in the includes response object.\n\nAllowed values: attachments.poll_ids,attachments.media_keys,author_id,geo.place_id,in_reply_to_user_id,referenced_tweets.id,entities.mentions.username,referenced_tweets.id.author_id\n\nDefault values: none",
+              "key": "expansions",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "description": "Comma-separated list of fields for the media object. Expansion required.\n\nAllowed values:\nduration_ms,height,media_key,non_public_metrics,organic_metrics,preview_image_url,promoted_metrics,public_metrics,type,url,width\n\nDefault values:\nmedia_key,type\n\nOAuth1.0a User Context authorization required if any of the following fields are included in the request:\nnon_public_metrics,organic_metrics,promoted_metrics",
+              "key": "media.fields",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "description": "Comma-separated list of fields for the place object. Expansion required.\n\nAllowed values:\ncontained_within,country,country_code,full_name,geo,id,name,place_type\n\nDefault values:\nid,full_name",
+              "key": "place.fields",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "description": "Comma-separated list of fields for the poll object. Expansion required.\n\nAllowed values:\nduration_minutes,end_datetime,id,options,voting_status\n\nDefault values:\nid, options",
+              "key": "poll.fields",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "description": "Comma-separated list of fields for the user object. Expansion required.\n\nAllowed values:\ncreated_at,description,entities,id,location,name,pinned_tweet_id,profile_image_url,protected,public_metrics,url,username,verified,withheld\n\nDefault values:\nid,name,username",
+              "key": "user.fields",
+              "type": "text",
+              "value": "",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
