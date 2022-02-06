@@ -308,8 +308,20 @@
       "response": []
     },
     {
-      "name": "Lista BB ",
-      "id": "ffef876f-be63-4621-bf5e-194271bd6e2d",
+      "name": "Tiago Abravanel Tweets Lista BBB Influencers",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "e0f5f9a3-7e34-43f9-82d6-a24be120302a",
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "id": "9f6e0585-88d8-4de1-b2fa-f15d065a473b",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -323,7 +335,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "https://api.twitter.com/2/tweets/search/recent?query=Linn OR Lina (from:canalespiadinha OR from:maedinahparcial OR from:hacker_real1 OR from:tvlizando OR from:realitysvip OR from:vaidesmaiar OR from:anapaularenault OR from:popline OR from:falamuka OR from:hugogloss) -is:reply -is:quote -is:retweet &max_results=100&tweet.fields={{common_tweet_f}}&expansions=attachments.poll_ids,author_id&poll.fields={{all_poll_f}}&user.fields={{common_user_f}}",
+          "raw": "https://api.twitter.com/2/tweets/search/recent?query=Tiago OR Thiago OR Abravanel (from:canalespiadinha OR from:maedinahparcial OR from:hacker_real1 OR from:tvlizando OR from:realitysvip OR from:vaidesmaiar OR from:anapaularenault OR from:popline OR from:falamuka OR from:hugogloss) -is:reply -is:quote -is:retweet&max_results=100&tweet.fields={{common_tweet_f}}&expansions=attachments.poll_ids,author_id&poll.fields={{all_poll_f}}&user.fields={{common_user_f}}",
           "protocol": "https",
           "host": [
             "api",
@@ -339,7 +351,7 @@
           "query": [
             {
               "key": "query",
-              "value": "Linn OR Lina (from:canalespiadinha OR from:maedinahparcial OR from:hacker_real1 OR from:tvlizando OR from:realitysvip OR from:vaidesmaiar OR from:anapaularenault OR from:popline OR from:falamuka OR from:hugogloss) -is:reply -is:quote -is:retweet ",
+              "value": "Tiago OR Thiago OR Abravanel (from:canalespiadinha OR from:maedinahparcial OR from:hacker_real1 OR from:tvlizando OR from:realitysvip OR from:vaidesmaiar OR from:anapaularenault OR from:popline OR from:falamuka OR from:hugogloss) -is:reply -is:quote -is:retweet",
               "description": "Required. Query for matching Tweets. Up to 512 characters."
             },
             {
@@ -422,20 +434,8 @@
       "response": []
     },
     {
-      "name": "Tiago Abravanel Tweets Lista BBB Influencers",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "id": "e0f5f9a3-7e34-43f9-82d6-a24be120302a",
-            "exec": [
-              ""
-            ],
-            "type": "text/javascript"
-          }
-        }
-      ],
-      "id": "9f6e0585-88d8-4de1-b2fa-f15d065a473b",
+      "name": "Lista BB ",
+      "id": "ffef876f-be63-4621-bf5e-194271bd6e2d",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -449,7 +449,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "https://api.twitter.com/2/tweets/search/recent?query=Tiago OR Thiago OR Abravanel (from:canalespiadinha OR from:maedinahparcial OR from:hacker_real1 OR from:tvlizando OR from:realitysvip OR from:vaidesmaiar OR from:anapaularenault OR from:popline OR from:falamuka OR from:hugogloss) -is:reply -is:quote -is:retweet&max_results=100&tweet.fields={{common_tweet_f}}&expansions=attachments.poll_ids,author_id&poll.fields={{all_poll_f}}&user.fields={{common_user_f}}",
+          "raw": "https://api.twitter.com/2/tweets/search/recent?query=Linn OR Lina (from:canalespiadinha OR from:maedinahparcial OR from:hacker_real1 OR from:tvlizando OR from:realitysvip OR from:vaidesmaiar OR from:anapaularenault OR from:popline OR from:falamuka OR from:hugogloss) -is:reply -is:quote -is:retweet &max_results=100&tweet.fields={{common_tweet_f}}&expansions=attachments.poll_ids,author_id&poll.fields={{all_poll_f}}&user.fields={{common_user_f}}",
           "protocol": "https",
           "host": [
             "api",
@@ -465,7 +465,7 @@
           "query": [
             {
               "key": "query",
-              "value": "Tiago OR Thiago OR Abravanel (from:canalespiadinha OR from:maedinahparcial OR from:hacker_real1 OR from:tvlizando OR from:realitysvip OR from:vaidesmaiar OR from:anapaularenault OR from:popline OR from:falamuka OR from:hugogloss) -is:reply -is:quote -is:retweet",
+              "value": "Linn OR Lina (from:canalespiadinha OR from:maedinahparcial OR from:hacker_real1 OR from:tvlizando OR from:realitysvip OR from:vaidesmaiar OR from:anapaularenault OR from:popline OR from:falamuka OR from:hugogloss) -is:reply -is:quote -is:retweet ",
               "description": "Required. Query for matching Tweets. Up to 512 characters."
             },
             {
