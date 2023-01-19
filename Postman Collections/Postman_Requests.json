@@ -21,7 +21,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://api.twitter.com/2/tweets/search/recent?query=paredão (from:maedinahparcial OR from:hacker_real1 OR from:tvlizando OR from:realitysvip OR from:vaidesmaiar OR from:anapaularenault OR from:popline OR from:falamuka OR from:hugogloss)&max_results=100&tweet.fields=attachments,author_id,conversation_id,created_at,public_metrics,source,text&expansions=attachments.poll_ids,author_id&poll.fields=duration_minutes,end_datetime,id,options,voting_status&user.fields=created_at,description,public_metrics,url,username",
+					"raw": "https://api.twitter.com/2/tweets/search/recent?max_results=100&tweet.fields=attachments,author_id,conversation_id,created_at,public_metrics,source,text&expansions=attachments.poll_ids,author_id&poll.fields=duration_minutes,end_datetime,id,options,voting_status&user.fields=created_at,description,public_metrics,url,username&query=domitila (from:maedinahparcial OR from:hacker_real1 OR from:tvlizando OR from:realitysvip OR from:vaidesmaiar OR from:anapaularenault OR from:popline OR from:falamuka OR from:hugogloss)",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -35,11 +35,6 @@
 						"recent"
 					],
 					"query": [
-						{
-							"key": "query",
-							"value": "paredão (from:maedinahparcial OR from:hacker_real1 OR from:tvlizando OR from:realitysvip OR from:vaidesmaiar OR from:anapaularenault OR from:popline OR from:falamuka OR from:hugogloss)",
-							"description": "Required. Query for matching Tweets. Up to 512 characters."
-						},
 						{
 							"description": "The oldest UTC timestamp (from most recent 7 days) from which the Tweets will be provided. YYYY-MM-DDTHH:mm:ssZ (ISO 8601/RFC 3339).",
 							"key": "start_time",
@@ -113,6 +108,10 @@
 							"key": "user.fields",
 							"value": "created_at,description,public_metrics,url,username",
 							"description": "Comma-separated list of fields for the user object. Expansion required.\n\nAllowed values:\ncreated_at,description,entities,id,location,name,pinned_tweet_id,profile_image_url,protected,public_metrics,url,username,verified,withheld\n\nDefault values:\nid,name,username"
+						},
+						{
+							"key": "query",
+							"value": "domitila (from:maedinahparcial OR from:hacker_real1 OR from:tvlizando OR from:realitysvip OR from:vaidesmaiar OR from:anapaularenault OR from:popline OR from:falamuka OR from:hugogloss)"
 						}
 					]
 				}
